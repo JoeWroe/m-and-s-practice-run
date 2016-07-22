@@ -1,7 +1,14 @@
 describe "User Stories" do
 
-  let(:basket)            { Basket.new(product_catalog: product_catalog) }
+  let(:basket)            { Basket.new(
+                                        product_catalog: product_catalog,
+                                        delivery_charger: delivery_charger
+                                      ) }
+
   let(:product_catalog)   { ProductCatalog.new }
+  let(:delivery_charger)  { DeliveryCharger.new(rules: defined_rules) }
+
+  let(:defined_rules) { "some defined rules" }
 
   describe "User Story One" do
 
