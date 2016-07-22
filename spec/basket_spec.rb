@@ -12,4 +12,11 @@ describe Basket do
       expect(basket.avaliable_products).to eq(product_catalog)
     end
   end
+
+  describe "delivery charge rules" do
+
+    it "can access rules" do
+      expect(basket.delivery_charge_rules).to eq(delivery_charger.rules)
+    end
+  end
 end
